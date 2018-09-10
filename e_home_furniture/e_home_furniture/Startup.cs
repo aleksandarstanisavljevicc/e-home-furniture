@@ -39,9 +39,12 @@ namespace e_home_furniture
                 //Here we create a Admin super user who will maintain the website				
 
                 var user = new ApplicationUser
-                {
+                {                    
+                    Email = "panonitweb@gmail.com",
                     UserName = "panonit",
-                    Email = "panonitweb@gmail.com"
+                    FirstName = "Spasoje",
+                    LastName = "Tomanic",
+                    Address = "Lazara Nancica bb"                    
                 };
 
                 string userPWD = "Web.123";

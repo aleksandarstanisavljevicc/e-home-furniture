@@ -1,0 +1,83 @@
+﻿@model e_home_furniture.Models.Showroom
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Showroom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.showRoomName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.showRoomName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.e_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.e_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.web_Site)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.web_Site)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taxId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taxId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bankAccountNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bankAccountNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.showRoomId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
