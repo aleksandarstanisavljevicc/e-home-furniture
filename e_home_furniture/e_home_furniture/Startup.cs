@@ -12,7 +12,7 @@ namespace e_home_furniture
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            CreateRolesandUsers();
+          //  CreateRolesandUsers();
         }
 
 
@@ -44,7 +44,8 @@ namespace e_home_furniture
                     UserName = "panonit",
                     FirstName = "Spasoje",
                     LastName = "Tomanic",
-                    Address = "Lazara Nancica bb"                    
+                    Address = "Lazara Nancica bb",
+                    Role = "Admin"
                 };
 
                 string userPWD = "Web.123";
@@ -67,17 +68,6 @@ namespace e_home_furniture
 				roleManager.Create(role);
 
 			}*/
-
-            // creating Creating Employee role 
-            else if (!roleManager.RoleExists("Employee"))
-            {
-                var role = new IdentityRole
-                {
-                    Name = RoleName.User
-                };
-                roleManager.Create(role);
-
-            }
             else
             {
                 var role = new IdentityRole

@@ -15,6 +15,8 @@ namespace e_home_furniture.Models
 
         public string Address { get; set; }
 
+        public string Role { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -35,5 +37,9 @@ namespace e_home_furniture.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<e_home_furniture.Models.ApplicationUser> ApplicationUsers { get; set; }
+
+        public System.Data.Entity.DbSet<e_home_furniture.Models.Account> Accounts { get; set; }
     }
 }
