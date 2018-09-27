@@ -12,18 +12,18 @@ namespace e_home_furniture
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-          //  CreateRolesandUsers();
+            //  CreateRolesandUsers();
         }
 
 
         // In this method we will create default User roles and Admin user for login
-        private void CreateRolesandUsers()
+        /* private void CreateRolesandUsers()
         {
-            ApplicationDbContext context = new ApplicationDbContext();
+           ApplicationDbContext context = new ApplicationDbContext();
 
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-
+            
 
             // In Startup iam creating first Admin Role and creating a default Admin User 
             if (!roleManager.RoleExists("Admin"))
@@ -67,7 +67,7 @@ namespace e_home_furniture
 				role.Name = RoleName.Manager;
 				roleManager.Create(role);
 
-			}*/
+			}*/ /*
             else
             {
                 var role = new IdentityRole
@@ -76,6 +76,6 @@ namespace e_home_furniture
                 };
                 roleManager.Create(role);
             }
-        }
+        }*/
     }
 }
